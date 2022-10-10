@@ -10,14 +10,12 @@ import './App.css';
 import { useStateContext } from './contexts/ContextProvider';
 
 const App = () => {
- 
-  const { activeMenu } = useStateContext ;
-  
+  const { activeMenu } = useStateContext();
+
   return (
 
-    <div >
+    <div>
       <BrowserRouter>
-
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
 
@@ -25,18 +23,18 @@ const App = () => {
               content="Settings"
               position="Top"
             >
-
               <button
                 type="button"
-                style={{ backgroundColor : 'blue' ,borderRadius: '50%' }}
+                onClick={() => {}}
+                style={{ background: 'blue', borderRadius: '50%' }}
                 className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
               >
                 <FiSettings />
               </button>
 
             </TooltipComponent>
-
           </div>
+          
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
               <Sidebar />
@@ -46,7 +44,6 @@ const App = () => {
               <Sidebar />
             </div>
           )}
-
           <div
             className={
               activeMenu
@@ -58,7 +55,6 @@ const App = () => {
               <Navbar />
             </div>
             <div>
-             
 
               <Routes>
                 {/* dashboard  */}

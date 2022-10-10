@@ -4,7 +4,6 @@ import "./index.css";
 import App from './App';
 import { ContextProvider } from './contexts/ContextProvider';
 
-
 ReactDom.render(
     <ContextProvider>
         <App />
